@@ -1,55 +1,61 @@
 package de.valtech;
 
-import org.apache.wicket.extensions.ajax.markup.html.autocomplete.AutoCompleteSettings;
-import org.apache.wicket.extensions.ajax.markup.html.autocomplete.AutoCompleteTextField;
-import org.apache.wicket.markup.html.basic.Label;
 import org.apache.wicket.markup.html.WebPage;
+import org.apache.wicket.markup.html.basic.Label;
+import org.apache.wicket.markup.html.form.Form;
+import org.apache.wicket.markup.repeater.RepeatingView;
+import org.apache.wicket.model.IModel;
+import org.apache.wicket.extensions.ajax.markup.html.autocomplete.AutoCompleteTextField;
 
+
+import java.util.*;
 
 
 public class ValPage extends WebPage {
 
-	private String[] projectList = {"Build Project 1", "Development Project", "Build Project 2", "Hackaton", "Development Project 2", "Build Project 3"};
+    private static List<String> projectList = Arrays.asList("Build Project 1", "Development Project", "Build Project 2", "Hackaton", "Development Project 2", "Build Project 3");
 
 
-	public ValPage() {
+    public ValPage() {
 
-	//TODOS
-
-		//userLabel
-		add(new Label("userTag","Max Mustermann"));
+        //userLabel
+        add(new Label("userTag", getString("label.name")));
 
 
-		//icon - done in HTML
+        //icon - done in HTML
 
 
-
-		//searchbar
-
+        //searchbar
 
 
+        //outputDisplay
+        RepeatingView rv = new RepeatingView("output_list");
+        add(rv);
 
-		//outputDisplay
-			//repeatedView to cycle through valid project entries and add a projectname-label to the output field
-		/**RepeatingView list = new RepeatingView("list");
-		add(list);
-		for(int i = 1; i <= 10; i++) {
-			list.add(new Label(list.newChildId(), "item"+ i));
-		}
-	}
+        List<String> listToBeDisplayed = searchProjects("Build Project"); //CHANGE TO SEARCHBAR LATER
+
+        for (String k : listToBeDisplayed) {
+            rv.add(new Label(rv.newChildId(), "" + k));
+        }
+    }
 
 
-	// when starting the search in the searchbar, lookup possible solutions and forward them to the display area
-public String[] searchProjects(String searchString){
-		String[] output = new String[projectList.length];
-		int a = 0;
-		for(int i = 0; i <= projectList.length; i++) {
-			if (projectList[i].contains(searchString)) {
-				output[a] = projectList[i];
-				a++;
-			}
-		}
-		 */
-	}
+    //checks if search String is part of items in projectList
+    public static List<String> searchProjects(String searchString) {
+        List<String> output = new ArrayList<String>() {
+        };
+        for (String i : projectList) {
+            if (i.contains(searchString))
+                output.add(i);
+        }
 
+        return output;
+    }
+
+
+    public static void main(String[] args) {
+        System.out.println(Arrays.toString(searchProjects("Build Project").toArray()));
+    }
 }
+
+

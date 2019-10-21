@@ -1,16 +1,27 @@
-
 <html xmlns:wicket="http://wicket.apache.org">
 
-	<head>
-		<meta charset="utf-8" />
-		<title>ValPage: Getting started with Wicket</title>
-    </head>
-	<body>
-            <img src="valtech_logo.png"/>
-		    <span wicket:id = "userTag">[label text inserted]</span>
+<head>
+    <meta charset="utf-8"/>
+    <title>ValPage: Getting started with Wicket</title>
+</head>
 
-    <div>
+<body>
+<img src="valtech_logo.png"/>
+<span wicket:id="userTag">[label text inserted]</span>
 
-      </div>
-      </body>
-  </html>
+<div>
+    <form wicket:id="form">
+        Insert Project Name: <input type="text" wicket:id="ac" size="50"/>
+
+    </form>
+</div>
+
+<div>
+    <ul>
+        <li wicket:id="output_list"></li>
+    </ul>
+</div>
+
+</body>
+
+</html>
