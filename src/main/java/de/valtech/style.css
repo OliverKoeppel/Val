@@ -1,0 +1,50 @@
+h1 {
+    color: #170eff;
+    font-size: 20px;
+    text-align: center;
+}
+
+div.headLine {
+    background-color: #b2a8b4;
+    width: 100%;
+    height: 5%;
+    left: 0;
+    top: 0;
+    position: fixed;
+    border-bottom: 1px solid black;
+}
+
+
+img.valLogo {
+    width: 102px;
+    height: 29px;
+    position: absolute;
+    top: 5px;
+    left: 1%;
+}
+
+img.userSymbol {
+    width: 29px;
+    height: 29px;
+    position: absolute;
+    right: .75%;
+    top: 8px;
+}
+
+span.userName {
+    width: auto;
+    height: auto;
+    position: absolute;
+    top: 15px;
+    right: 3%;
+}
+
+ul {
+    position: absolute;
+    top: 30%;
+    left: 25%;
+    text-align: left;
+    border: 3px solid #b2a8b4;
+    width: 50%;
+    font-size: 20px;
+}

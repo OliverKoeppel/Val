@@ -2,15 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f4ed55b5-1ae4-4328-9db0-02ae7741d212" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/de/valtech/ValPage.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/de/valtech/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/de/valtech/ValPage.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/valtech/ValPage.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/de/valtech/ValPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/valtech/ValPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/de/valtech/ValPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/de/valtech/ValPage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/de/valtech/WicketApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/valtech/WicketApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/wicketstarttask.kotlin_module" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/de/valtech/ValPage.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/de/valtech/ValPage.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/de/valtech/WicketApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/de/valtech/WicketApplication.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/META-INF/wicketstarttask.kotlin_module" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -25,6 +27,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="CSS File" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -36,10 +40,12 @@
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
@@ -130,8 +136,8 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.Start" />
-        <item itemvalue="Application.ValPage" />
         <item itemvalue="Application.probieren" />
+        <item itemvalue="Application.ValPage" />
         <item itemvalue="JUnit.TestHomePage" />
       </list>
     </recent_temporary>
@@ -147,7 +153,7 @@
       <option name="presentableId" value="Default" />
       <updated>1571226422973</updated>
       <workItem from="1571226427316" duration="6518000" />
-      <workItem from="1571317351355" duration="23403000" />
+      <workItem from="1571317351355" duration="36460000" />
     </task>
     <servers />
   </component>
