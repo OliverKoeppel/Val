@@ -14,19 +14,26 @@
 </wicket:head>
 
 <body>
-<div class="headLine">
+<div ID="header">
 
-    <img class="valLogo" src="valtech_logo.png"/>
+    <img id="valLogo" src="valtech_logo.png"/>
 
-    <span class="userName" wicket:id="userTag">[label text inserted]</span>
+    <span id="userName" wicket:id="userTag">[label text inserted]</span>
 
-    <img class="userSymbol" src="user_logo.png">
-
+    <img id="userSymbol" src="user_logo.png">
 
 </div>
+
 <div>
+    <form wicket:id="userForm" id="searchTerm">
+        <input type="text" wicket:id="text" id="text" />
+        <input wicket:id="submitButton" type="submit" value="search" id="submitButton"/>
+    </form>
+</div>
+
+<div wicket:id="repeatingViewContainer">
     <ul>
-        <li wicket:id="output_list"></li>
+        <li wicket:id="output_view"></li>
     </ul>
 </div>
 
