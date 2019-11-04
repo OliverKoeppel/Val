@@ -18,36 +18,34 @@ public class ValPage extends WebPage {
 
     public ValPage() {
 
-        add(new Label("userTag", getString("label.name")));
+        add(new Label("userTag", "userName"));
 
-
-        //icon - done in HTML
+        Form<String> searchForm = new Form<>("searchForm");
+        add(searchForm);
 
         TextField userTxt = new TextField<>("text", Model.of(""));
+        searchForm.add(userTxt);
 
-
-        //outputDisplay
         final WebMarkupContainer repeatingViewContainer = new WebMarkupContainer("repeatingViewContainer");
-        add(repeatingViewContainer);
         repeatingViewContainer.setOutputMarkupId(true);
+        add(repeatingViewContainer);
+
         ProjectRepeatingView projectRepeatingView = new ProjectRepeatingView("output_view", projectListModel);
         repeatingViewContainer.add(projectRepeatingView);
 
         AjaxButton ajaxSubmitButton = new AjaxButton("submitButton") {
             @Override
             protected void onSubmit(AjaxRequestTarget target) {
-
-                super.onSubmit(target);
-                projectRepeatingView.setOutputList(projectListModel.searchProjects(userTxt.getDefaultModelObjectAsString()));
-                target.add(repeatingViewContainer);
+                if (userTxt.getDefaultModelObjectAsString() != "") {
+                    super.onSubmit(target);
+                    projectRepeatingView.removeAll();
+                    projectRepeatingView.setOutputList(projectListModel.searchProjects(userTxt.getDefaultModelObjectAsString()));
+                    target.add(repeatingViewContainer);
+                }
             }
         };
+        searchForm.add(ajaxSubmitButton);
 
-
-        Form<String> form = new Form<>("userForm");
-        form.add(userTxt);
-        form.add(ajaxSubmitButton);
-        add(form);
 
     }
 }

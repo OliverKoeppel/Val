@@ -2,13 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f4ed55b5-1ae4-4328-9db0-02ae7741d212" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/de/valtech/ProjectListModel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/de/valtech/ProjectRepeatingView.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/de/valtech/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/de/valtech/UserPage.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/de/valtech/UserPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/de/valtech/ProjectListModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/valtech/ProjectListModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/de/valtech/ProjectRepeatingView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/valtech/ProjectRepeatingView.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/de/valtech/ValPage.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/valtech/ValPage.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/de/valtech/ValPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/valtech/ValPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/de/valtech/ValPage.properties" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/de/valtech/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/valtech/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/de/valtech/TestHomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/de/valtech/TestHomePage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/de/valtech/ValPage.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/de/valtech/ValPage.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/de/valtech/ValPage.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/de/valtech/TestHomePage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/de/valtech/TestHomePage.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -23,8 +30,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="CSS File" />
-        <option value="HTML File" />
         <option value="Class" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -133,9 +140,9 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.Start" />
+        <item itemvalue="JUnit.TestHomePage" />
         <item itemvalue="Application.probieren" />
         <item itemvalue="Application.ValPage" />
-        <item itemvalue="JUnit.TestHomePage" />
       </list>
     </recent_temporary>
   </component>
@@ -154,7 +161,9 @@
       <updated>1571226422973</updated>
       <workItem from="1571226427316" duration="6518000" />
       <workItem from="1571317351355" duration="56751000" />
-      <workItem from="1572424519795" duration="13113000" />
+      <workItem from="1572424519795" duration="16286000" />
+      <workItem from="1572600351224" duration="70000" />
+      <workItem from="1572854125289" duration="12268000" />
     </task>
     <servers />
   </component>
@@ -179,7 +188,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/main/java/de/valtech/ValPage.java</url>
-          <line>37</line>
+          <line>36</line>
           <properties method="onSubmit">
             <option name="EMULATED" value="true" />
           </properties>

@@ -8,6 +8,7 @@ public class ProjectRepeatingView extends RepeatingView {
 
     private ProjectListModel outputList;
 
+
     public ProjectListModel getOutputList() {
         return outputList;
     }
@@ -24,7 +25,6 @@ public class ProjectRepeatingView extends RepeatingView {
     @Override
     protected void onConfigure() {
         super.onConfigure();
-        //add entries to repeatingView
         for (String k : this.getOutputList().getObject()) {
             this.add(new Label(this.newChildId(), "" + k));
         }

@@ -1,9 +1,3 @@
-h1 {
-    color: #170eff;
-    font-size: 20px;
-    text-align: center;
-}
-
 #header {
     background-color: #b2a8b4;
     width: 100%;
@@ -13,7 +7,6 @@ h1 {
     position: fixed;
     border-bottom: 1px solid black;
 }
-
 
 #valLogo {
     width: 102px;
@@ -58,5 +51,5 @@ ul {
 }
 
 #submitButton{
-    font-size: 40px;
+    font-size: 80px;
 }
