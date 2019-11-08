@@ -22,11 +22,11 @@ public class ProjectRepeatingView extends RepeatingView {
     }
 
     @Override
-    protected void onConfigure() {
+    protected void onPopulate() {
         super.onConfigure();
-        //add entries to repeatingView
-        for (String k : this.getOutputList().getObject()) {
-            this.add(new Label(this.newChildId(), "" + k));
+        removeAll();
+        for (Project k : this.getOutputList().getObject()) {
+            this.add(new Label(this.newChildId(), "" + k.getTitle()));
         }
     }
 }

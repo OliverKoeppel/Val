@@ -3,14 +3,13 @@ package de.valtech;
 import org.apache.wicket.model.util.ListModel;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
-public class ProjectListModel extends ListModel<String> {
+public class ProjectListModel extends ListModel<Project> {
 
 
-    public ProjectListModel(List<String> list) {
+    public ProjectListModel(List<Project> list) {
         super(list);
     }
 
@@ -21,11 +20,11 @@ public class ProjectListModel extends ListModel<String> {
     //checks if search String is part of items in projectList and returns true items in new list
     public ProjectListModel searchProjects(String searchString) {
         ProjectListModel outputProjectListModel = new ProjectListModel();
-        List<String> outputList = new ArrayList<>();
+        List<Project> outputList = new ArrayList<>();
 
-        for (String i : this.getObject()) {
+        for (Project i : this.getObject()) {
 
-            if (i.contains(searchString)) {
+            if (i.getTitle().contains(searchString)) {
 
                 outputList.add(i);
             }

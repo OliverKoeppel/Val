@@ -9,17 +9,16 @@ import org.apache.wicket.markup.html.form.Form;
 import org.apache.wicket.markup.html.form.TextField;
 import org.apache.wicket.model.Model;
 
-import java.util.Arrays;
-
 
 public class ValPage extends WebPage {
 
-    private ProjectListModel projectListModel = new ProjectListModel(Arrays.asList("Build Project 1", "Development Project", "Build Project 2", "Hackaton", "Development Project 2", "Build Project 3"));
 
     public ValPage() {
 
-        add(new Label("userTag", getString("label.name")));
+        ProjectListFactory projectListFactory = new ProjectListFactory();
+        ProjectListModel projectListModel = projectListFactory.createNewProjectList();
 
+        add(new Label("userTag", getString("label.name")));
 
         //icon - done in HTML
 
@@ -36,7 +35,6 @@ public class ValPage extends WebPage {
         AjaxButton ajaxSubmitButton = new AjaxButton("submitButton") {
             @Override
             protected void onSubmit(AjaxRequestTarget target) {
-
                 super.onSubmit(target);
                 projectRepeatingView.setOutputList(projectListModel.searchProjects(userTxt.getDefaultModelObjectAsString()));
                 target.add(repeatingViewContainer);
