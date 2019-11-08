@@ -2,6 +2,7 @@ package de.valtech;
 
 import org.apache.wicket.ajax.AjaxRequestTarget;
 import org.apache.wicket.ajax.markup.html.form.AjaxButton;
+import org.apache.wicket.extensions.ajax.markup.html.modal.ModalWindow;
 import org.apache.wicket.markup.html.WebMarkupContainer;
 import org.apache.wicket.markup.html.WebPage;
 import org.apache.wicket.markup.html.basic.Label;
@@ -18,7 +19,7 @@ public class ValPage extends WebPage {
         ProjectListFactory projectListFactory = new ProjectListFactory();
         ProjectListModel projectListModel = projectListFactory.createNewProjectList();
 
-        add(new Label("userTag", getString("label.name")));
+        add(new Label("userTag", "userName"));
 
         //icon - done in HTML
 

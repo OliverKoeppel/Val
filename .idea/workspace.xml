@@ -2,16 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f4ed55b5-1ae4-4328-9db0-02ae7741d212" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/de/valtech/Project.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/de/valtech/ProjectInfoPanel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/de/valtech/ProjectListFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/de/valtech/LabelLink.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/de/valtech/ProjectInfoPanel.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/de/valtech/ProjectListModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/valtech/ProjectListModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/de/valtech/ProjectInfoPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/valtech/ProjectInfoPanel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/de/valtech/ProjectRepeatingView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/valtech/ProjectRepeatingView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/de/valtech/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/valtech/Human.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/de/valtech/UserPage.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/de/valtech/UserPage.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/de/valtech/ValPage.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/valtech/ValPage.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/de/valtech/ValPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/valtech/ValPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/de/valtech/WicketApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/valtech/WicketApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/de/valtech/ValPage.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/de/valtech/ValPage.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/de/valtech/WicketApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/de/valtech/WicketApplication.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -182,7 +182,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/main/java/de/valtech/ValPage.java</url>
-          <line>36</line>
+          <line>37</line>
           <properties method="onSubmit">
             <option name="EMULATED" value="true" />
           </properties>

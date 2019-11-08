@@ -1,0 +1,35 @@
+<!doctype html>
+<html xmlns:wicket="http://wicket.apache.org">
+
+<head>
+    <meta charset="utf-8"/>
+    <title>DetailedProjectInformation</title>
+
+</head>
+
+<wicket:head>
+    <wicket:link>
+        <link rel="stylesheet" type="text/css" href="style.css"/>
+    </wicket:link>
+</wicket:head>
+
+<body>
+
+<wicket:panel>
+
+    <span wicket:id="title"></span>
+    <h1> Detailed Project Information </h1>
+
+    <tbody>
+    <tr> <td>Title</td> <td> <span wicket:id="title"></span> </td> </tr>
+    <tr> <td>Start Date</td> <td><span wicket:id="startDate"></span> </td> </tr>
+    <tr> <td>End Date</td> <td><span wicket:id="endDate"></span> </td> </tr>
+    <tr> <td>Project Manager</td> <td><span wicket:id="projectLead"></span> </td> </tr>
+    <tr> <td>Team Members</td> <td><span wicket:id="teamMembers"></span> </td> </tr>
+    </tbody>
+
+</wicket:panel>
+
+</body>
+
+</html>
