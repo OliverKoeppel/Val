@@ -14,4 +14,8 @@ public class Human implements Serializable {
         this.lastName = lastName;
         this.age = age;
     }
+
+    public String getFullName(){
+        return (firstName +" "+ lastName);
+    }
 }

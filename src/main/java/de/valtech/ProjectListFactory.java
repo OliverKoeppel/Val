@@ -22,11 +22,11 @@ public class ProjectListFactory {
         Human member10 = new Human("firstMember10", "lastMember10", 35);
 
 
-        ListModel<Human> team1 = new ListModel<Human>(Arrays.asList(member1, member2, member3));
-        ListModel<Human> team2 = new ListModel<Human>(Arrays.asList(member4, member5));
-        ListModel<Human> team3 = new ListModel<Human>(Arrays.asList(member6, member7, member8));
-        ListModel<Human> team4 = new ListModel<Human>(Arrays.asList(member8, member9));
-        ListModel<Human> team5 = new ListModel<Human>(Arrays.asList(member9, member10));
+        Team team1 = new Team(Arrays.asList(member1, member2, member3));
+        Team team2 = new Team(Arrays.asList(member4, member5));
+        Team team3 = new Team(Arrays.asList(member6, member7, member8));
+        Team team4 = new Team(Arrays.asList(member8, member9));
+        Team team5 = new Team(Arrays.asList(member9, member10));
 
         Project project1 = new Project("Build Project 1", LocalDate.of(2019, 1, 1), LocalDate.of(2019, 1, 3), new Human("firstLead1", "lastLead1", 51), team1);
         Project project2 = new Project("Build Project 2", LocalDate.of(2019, 11, 1), LocalDate.of(2019, 11, 20), new Human("firstLead2", "lastLead2", 37), team2);

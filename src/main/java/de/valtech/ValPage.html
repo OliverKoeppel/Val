@@ -18,23 +18,26 @@
 
     <img id="valLogo" src="valtech_logo.png"/>
 
-    <span id="userName" wicket:id="userTag">[label text inserted]</span>
+    <span id="userTag" wicket:id="userTag">[label text inserted]</span>
 
-    <img id="userSymbol" src="user_logo.png">
+    <img id="userSymbol" src="user_logo.png" class="smallIcon">
 
 </div>
 
 <div>
     <form wicket:id="userForm" id="searchTerm">
-        <input type="text" wicket:id="text" id="text" />
-        <input wicket:id="submitButton" type="submit" value="search" id="submitButton"/>
+        <input type="text" wicket:id="text" id="text" class="basicText" />
+        <a wicket:id ="ajaxLink"><input type="image" id="searchIcon" alt="search_icon" src= "search_icon.png"/></a>
     </form>
 </div>
+
+<div wicket:id="infoModalWindow"></div>
+
 
 <div wicket:id="repeatingViewContainer">
     <ul>
         <li wicket:id="output_view">
-            <span wicket:id="label"></span>
+            <span wicket:id="label" class="basicText" ></span>
         </li>
 
     </ul>

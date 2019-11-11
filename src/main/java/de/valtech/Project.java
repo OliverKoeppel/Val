@@ -11,30 +11,23 @@ public class Project implements Serializable {
     private LocalDate startDate;
     private LocalDate endDate;
     private Human projectLead;
-    private ListModel<Human> teamMembers;
+    private Team team;
 
-    public Project(String title, LocalDate startDate, LocalDate endDate, Human projectLead, ListModel teamMembers) {
+    public Project(String title, LocalDate startDate, LocalDate endDate, Human projectLead, Team team) {
         this.title = title;
         this.startDate = startDate;
         this.endDate = endDate;
         this.projectLead = projectLead;
-        this.teamMembers = teamMembers;
+        this.team = team;
     }
 
-    public LocalDate getStartDate() {
-        return startDate;
-    }
-
-    public LocalDate getEndDate() {
-        return endDate;
-    }
 
     public Human getProjectLead() {
         return projectLead;
     }
 
-    public ListModel<Human> getTeamMembers() {
-        return teamMembers;
+    public Team getTeam() {
+        return team;
     }
 
     public String getTitle() {

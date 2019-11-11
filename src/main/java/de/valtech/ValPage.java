@@ -1,13 +1,14 @@
 package de.valtech;
 
 import org.apache.wicket.ajax.AjaxRequestTarget;
-import org.apache.wicket.ajax.markup.html.form.AjaxButton;
+import org.apache.wicket.ajax.markup.html.AjaxLink;
 import org.apache.wicket.extensions.ajax.markup.html.modal.ModalWindow;
 import org.apache.wicket.markup.html.WebMarkupContainer;
 import org.apache.wicket.markup.html.WebPage;
 import org.apache.wicket.markup.html.basic.Label;
 import org.apache.wicket.markup.html.form.Form;
 import org.apache.wicket.markup.html.form.TextField;
+import org.apache.wicket.markup.html.link.Link;
 import org.apache.wicket.model.Model;
 
 
@@ -19,24 +20,27 @@ public class ValPage extends WebPage {
         ProjectListFactory projectListFactory = new ProjectListFactory();
         ProjectListModel projectListModel = projectListFactory.createNewProjectList();
 
+        final ModalWindow infoModalWindow = new ModalWindow("infoModalWindow");
+        add(infoModalWindow);
+        ModalInfoPanel modalInfoPanel = new ModalInfoPanel(infoModalWindow.getContentId(), projectListModel.getObject().get(0)); //"modalInfoPanel"
+        infoModalWindow.setContent(modalInfoPanel);
+        infoModalWindow.setTitle("Detailed Project information Window");
+
+
         add(new Label("userTag", "userName"));
 
-        //icon - done in HTML
-
         TextField userTxt = new TextField<>("text", Model.of(""));
-
 
         //outputDisplay
         final WebMarkupContainer repeatingViewContainer = new WebMarkupContainer("repeatingViewContainer");
         add(repeatingViewContainer);
         repeatingViewContainer.setOutputMarkupId(true);
-        ProjectRepeatingView projectRepeatingView = new ProjectRepeatingView("output_view", projectListModel);
+        ProjectRepeatingView projectRepeatingView = new ProjectRepeatingView("output_view", projectListModel, infoModalWindow, modalInfoPanel);
         repeatingViewContainer.add(projectRepeatingView);
 
-        AjaxButton ajaxSubmitButton = new AjaxButton("submitButton") {
+        AjaxLink ajaxLink = new AjaxLink<Link>("ajaxLink") {
             @Override
-            protected void onSubmit(AjaxRequestTarget target) {
-                super.onSubmit(target);
+            public void onClick(AjaxRequestTarget target) {
                 projectRepeatingView.setOutputList(projectListModel.searchProjects(userTxt.getDefaultModelObjectAsString()));
                 target.add(repeatingViewContainer);
             }
@@ -45,7 +49,7 @@ public class ValPage extends WebPage {
 
         Form<String> form = new Form<>("userForm");
         form.add(userTxt);
-        form.add(ajaxSubmitButton);
+        form.add(ajaxLink);
         add(form);
 
     }

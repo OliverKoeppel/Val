@@ -1,7 +1,6 @@
 package de.valtech;
 
 import org.apache.wicket.model.util.ListModel;
-
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;

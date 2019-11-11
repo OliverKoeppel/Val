@@ -1,10 +1,7 @@
 package de.valtech;
 
-import org.apache.wicket.ajax.AjaxEventBehavior;
 import org.apache.wicket.ajax.AjaxRequestTarget;
-import org.apache.wicket.ajax.markup.html.AjaxLink;
 import org.apache.wicket.extensions.ajax.markup.html.modal.ModalWindow;
-import org.apache.wicket.markup.html.basic.Label;
 import org.apache.wicket.markup.repeater.RepeatingView;
 import org.apache.wicket.model.IModel;
 import org.apache.wicket.model.Model;
@@ -12,6 +9,16 @@ import org.apache.wicket.model.Model;
 public class ProjectRepeatingView extends RepeatingView {
 
     private ProjectListModel outputList;
+    private ModalWindow infoModalWindow;
+    private ModalInfoPanel modalInfoPanel;
+
+    public ProjectRepeatingView(String id, IModel<?> model , ModalWindow infoModalWindow, ModalInfoPanel modalInfoPanel) {
+        super(id, model);
+        outputList = new ProjectListModel();
+        this.infoModalWindow = infoModalWindow;
+        this.modalInfoPanel = modalInfoPanel;
+    }
+
 
     public ProjectListModel getOutputList() {
         return outputList;
@@ -21,24 +28,17 @@ public class ProjectRepeatingView extends RepeatingView {
         this.outputList = newOutputList;
     }
 
-    public ProjectRepeatingView(String id, IModel<?> model) {
-        super(id, model);
-        outputList = new ProjectListModel();
-    }
 
     @Override
     protected void onPopulate() {
 
         super.onPopulate();
         removeAll();
-        ModalWindow infoModalWindow = new ModalWindow("infoModalWindow");
-
-        for (Project k : this.getOutputList().getObject()) {
-            LabelLink labelLink = new LabelLink(this.newChildId(), Model.of("Hans"),k.getTitle()){
+        for (Project project: this.getOutputList().getObject()) {
+            LabelLink labelLink = new LabelLink(this.newChildId(), Model.of("String"), project.getTitle()) {
                 @Override
                 public void onClick(AjaxRequestTarget target) {
-                    ProjectInfoPanel projectInfoPanel = new ProjectInfoPanel(k,"Panel" + k.getTitle(), infoModalWindow);
-                    infoModalWindow.setContent(projectInfoPanel);
+                    modalInfoPanel.setProject(project);
                     infoModalWindow.show(target);
                 }
             };

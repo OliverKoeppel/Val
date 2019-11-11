@@ -20,18 +20,27 @@ h1 {
     height: 29px;
     position: absolute;
     top: 5px;
-    left: 1%;
+    left: 0.5%;
 }
 
-#userSymbol {
-    width: 29px;
-    height: 29px;
+
+#userSymbol{
+width: 29px;
+height: 29px;
+position: absolute;
+right: .75%;
+top: 8px;
+}
+
+#searchIcon{
+    width: 20px;
+    height: 20px;
     position: absolute;
-    right: .75%;
-    top: 8px;
+    right: 18%;
+    top: 25%;
 }
 
-#userName {
+#userTag {
     width: auto;
     height: auto;
     position: absolute;
@@ -42,21 +51,52 @@ h1 {
 ul {
     position: absolute;
     top: 30%;
-    left: 25%;
+    right: 10%;
+    left: 10%;
     text-align: left;
     border: 3px solid #b2a8b4;
-    width: 50%;
+    width: 80%;
     height: auto;
     font-size: 20px;
-    }
-
-#searchTerm{
-    position: absolute;
-    width: 50%;
-    top:25%;
-    left:25%;
 }
 
-#submitButton{
+.basicText {
+    position: absolute;
+    color: #252525;
+    size: 20px;
+}
+
+#text {
+    position: absolute;
+    width: 70%;
+    top: 25%;
+    left: 10%;
+}
+
+
+#submitButton {
+    position: absolute;
     font-size: 40px;
+    top: 20%;
+    right: 10%;
+
+}
+
+table {
+    border-collapse: separate;
+    border-spacing: 0.2em;
+}
+
+th,
+caption {
+    background-color: #666;
+    color: #fff;
+}
+
+td {
+    background-image: linear-gradient(#f9f9f9, #e3e3e3);
+}
+
+input[type='image'] {
+    width: 80px;
 }
