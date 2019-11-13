@@ -1,85 +1,86 @@
-h1 {
-    color: #170eff;
-    font-size: 20px;
-    text-align: center;
-}
-
 #header {
+    position: absolute;
     background-color: #b2a8b4;
     width: 100%;
     height: 5%;
     left: 0;
     top: 0;
-    position: fixed;
     border-bottom: 1px solid black;
 }
 
-
 #valLogo {
+    position: absolute;
     width: 102px;
     height: 29px;
+    left: 25px;
+    top: 6px;
+}
+
+#userName {
     position: absolute;
-    top: 5px;
-    left: 0.5%;
-}
-
-
-#userSymbol{
-width: 29px;
-height: 29px;
-position: absolute;
-right: .75%;
-top: 8px;
-}
-
-#searchIcon{
-    width: 20px;
-    height: 20px;
-    position: absolute;
-    right: 18%;
-    top: 25%;
-}
-
-#userTag {
     width: auto;
-    height: auto;
-    position: absolute;
-    top: 15px;
-    right: 3%;
+    height: 29px;
+    right: 65px;
+    top: 13px;
+    font-family: "Arial";
 }
 
-ul {
+#userSymbol {
     position: absolute;
-    top: 30%;
-    right: 10%;
-    left: 10%;
-    text-align: left;
-    border: 3px solid #b2a8b4;
+    width: 29px;
+    height: 29px;
+    right: 25px;
+    top: 8px;
+}
+
+#searchForm {
+    position: absolute;
     width: 80%;
-    height: auto;
-    font-size: 20px;
+    top: 25%;
+    left: 10%;
+}
+
+#searchText {
+    position: absolute;
+    width: 97%;
+    height: 20px;
+}
+
+#searchIcon {
+    position: absolute;
+    width: 25px;
+    left: 98%;
 }
 
 .basicText {
-    position: absolute;
     color: #252525;
-    size: 20px;
+    font-size: 18px;
+    font-family: "Arial";
 }
 
-#text {
+.list-container{
     position: absolute;
-    width: 70%;
-    top: 25%;
-    left: 10%;
+    width: 80%;
+    left:10%;
+    right:10%;
+    top: 37%;
 }
 
+ul {
+    position: relative;
+    text-align: left;
+    border: 3px solid #b2a8b4;
+    height: auto;
+    font-size: 20px;
+    margin:0;
+    padding: 0;
+    list-style-type: none;
+}
 
-#submitButton {
-    position: absolute;
-    font-size: 40px;
-    top: 20%;
-    right: 10%;
-
+li {
+    padding: 5px 10px;
+    margin: 5px;
+    background-color: lightgrey;
 }
 
 table {
@@ -87,8 +88,7 @@ table {
     border-spacing: 0.2em;
 }
 
-th,
-caption {
+th, caption {
     background-color: #666;
     color: #fff;
 }
@@ -97,6 +97,7 @@ td {
     background-image: linear-gradient(#f9f9f9, #e3e3e3);
 }
 
-input[type='image'] {
-    width: 80px;
+#title2{
+    height: 20px;
+    vertical-align: center;
 }

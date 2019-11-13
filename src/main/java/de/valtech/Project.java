@@ -1,7 +1,5 @@
 package de.valtech;
 
-import org.apache.wicket.model.util.ListModel;
-
 import java.io.Serializable;
 import java.time.LocalDate;
 

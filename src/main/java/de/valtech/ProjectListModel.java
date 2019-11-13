@@ -16,15 +16,12 @@ public class ProjectListModel extends ListModel<Project> {
         super(Collections.emptyList());
     }
 
-    //checks if search String is part of items in projectList and returns true items in new list
     public ProjectListModel searchProjects(String searchString) {
         ProjectListModel outputProjectListModel = new ProjectListModel();
         List<Project> outputList = new ArrayList<>();
 
         for (Project i : this.getObject()) {
-
             if (i.getTitle().contains(searchString)) {
-
                 outputList.add(i);
             }
         }

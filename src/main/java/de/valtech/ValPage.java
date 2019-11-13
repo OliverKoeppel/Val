@@ -24,14 +24,13 @@ public class ValPage extends WebPage {
         add(infoModalWindow);
         ModalInfoPanel modalInfoPanel = new ModalInfoPanel(infoModalWindow.getContentId(), projectListModel.getObject().get(0)); //"modalInfoPanel"
         infoModalWindow.setContent(modalInfoPanel);
-        infoModalWindow.setTitle("Detailed Project information Window");
+        infoModalWindow.setTitle("Detailed Project Information");
 
 
         add(new Label("userTag", "userName"));
 
-        TextField userTxt = new TextField<>("text", Model.of(""));
+        TextField userTxt = new TextField<>("searchText", Model.of(""));
 
-        //outputDisplay
         final WebMarkupContainer repeatingViewContainer = new WebMarkupContainer("repeatingViewContainer");
         add(repeatingViewContainer);
         repeatingViewContainer.setOutputMarkupId(true);

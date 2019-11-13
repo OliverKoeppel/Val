@@ -2,15 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f4ed55b5-1ae4-4328-9db0-02ae7741d212" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/de/valtech/Team.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/de/valtech/Human.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/valtech/Human.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/de/valtech/ModalInfoPanel.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/valtech/ModalInfoPanel.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/de/valtech/Project.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/valtech/Project.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/de/valtech/ProjectInfoPanel.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/valtech/ModalInfoPanel.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/de/valtech/ProjectInfoPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/valtech/ModalInfoPanel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/de/valtech/ProjectListFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/valtech/ProjectListFactory.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/de/valtech/ProjectListModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/valtech/ProjectListModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/de/valtech/ProjectRepeatingView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/valtech/ProjectRepeatingView.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/de/valtech/ValPage.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/valtech/ValPage.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/de/valtech/ValPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/valtech/ValPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/de/valtech/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/valtech/style.css" afterDir="false" />
