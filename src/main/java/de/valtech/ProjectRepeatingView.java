@@ -14,7 +14,7 @@ public class ProjectRepeatingView extends RepeatingView {
 
     public ProjectRepeatingView(String id, IModel<?> model , ModalWindow infoModalWindow, ModalInfoPanel modalInfoPanel) {
         super(id, model);
-        outputList = new ProjectListModel();
+        outputList = ProjectListFactory.createNewProjectList();
         this.infoModalWindow = infoModalWindow;
         this.modalInfoPanel = modalInfoPanel;
     }

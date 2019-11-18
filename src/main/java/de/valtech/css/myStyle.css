@@ -13,7 +13,7 @@
     width: 102px;
     height: 29px;
     left: 25px;
-    top: 6px;
+    top: 8px;
 }
 
 #userName {
@@ -42,14 +42,23 @@
 
 #searchText {
     position: absolute;
-    width: 97%;
+    width: 95%;
     height: 20px;
 }
 
-#searchIcon {
-    position: absolute;
-    width: 25px;
-    left: 98%;
+#searchIcon{
+    left: 96%;
+}
+
+#clearIcon{
+    left: 97%;
+}
+
+
+.Icon {
+    color: black;
+    position: relative;
+    top: 4px;
 }
 
 .basicText {
@@ -81,6 +90,12 @@ li {
     padding: 5px 10px;
     margin: 5px;
     background-color: lightgrey;
+}
+
+#editButton{
+    position: absolute;
+    right: 10px;
+
 }
 
 table {

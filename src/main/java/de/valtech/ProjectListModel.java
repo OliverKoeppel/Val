@@ -17,6 +17,9 @@ public class ProjectListModel extends ListModel<Project> {
     }
 
     public ProjectListModel searchProjects(String searchString) {
+        if(searchString.isEmpty()){
+            return new ProjectListModel(this.getObject());
+        }
         ProjectListModel outputProjectListModel = new ProjectListModel();
         List<Project> outputList = new ArrayList<>();
 

@@ -1,5 +1,7 @@
 package de.valtech;
 
+import org.apache.wicket.ajax.AjaxRequestTarget;
+import org.apache.wicket.extensions.ajax.markup.html.modal.ModalWindow;
 import org.apache.wicket.markup.html.basic.Label;
 import org.apache.wicket.markup.html.panel.Panel;
 import org.apache.wicket.model.Model;
@@ -11,13 +13,20 @@ public class ModalInfoPanel extends Panel {
 
     private Project project;
 
-    public ModalInfoPanel(String id, Project project) {
+    public ModalInfoPanel(String id, Project project, ModalWindow infoModalWindow) {
         super(id);
         this.project = project;
+
+        LabelLink closeModalWindow = new LabelLink("closeButton", Model.of("String"), "close") {
+            @Override
+            public void onClick(AjaxRequestTarget target) {
+                infoModalWindow.close(target);
+            }
+        };
+        this.add(closeModalWindow);
     }
 
     public void setProject(Project project) {
-
         this.project = project;
     }
 
@@ -32,7 +41,6 @@ public class ModalInfoPanel extends Panel {
         add(new Label("endDate", new PropertyModel<>(project, "endDate")));
         add(new Label("projectLead", Model.of(project.getProjectLead().getFullName())));
         add(new Label("teamMembers", Model.of(project.getTeam().getFullTeamNames())));
-
     }
 
 

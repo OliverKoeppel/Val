@@ -6,7 +6,7 @@ import java.util.Arrays;
 public class ProjectListFactory {
 
 
-    public ProjectListModel createNewProjectList() {
+    public static ProjectListModel createNewProjectList() {
 
         Human member1 = new Human("firstMember1", "lastMember1", 52);
         Human member2 = new Human("firstMember2", "lastMember2", 25);

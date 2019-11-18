@@ -9,7 +9,7 @@
 
 <wicket:head>
     <wicket:link>
-        <link rel="stylesheet" type="text/css" href="style.css"/>
+        <link rel="stylesheet" type="text/css" href="css/myStyle.css"/>
     </wicket:link>
 </wicket:head>
 
@@ -17,7 +17,7 @@
 <wicket:panel>
 
     <table>
-    <caption> <span wicket:id="title2"></span> Details</caption>
+        <caption><span wicket:id="title2"></span> Details</caption>
 
 
         <tbody>
@@ -43,6 +43,11 @@
         </tr>
         </tbody>
     </table>
+
+    <input type="submit" wicket:id="closeButton">
+            <span wicket:id="label"></span>
+    </input>
+
 </wicket:panel>
 
 
