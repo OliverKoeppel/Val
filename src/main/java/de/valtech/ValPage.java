@@ -18,14 +18,12 @@ public class ValPage extends WebPage {
 
         ProjectListModel projectListModel = ProjectListFactory.createNewProjectList();
 
-        //try modalWindow via PageCreator
         final ModalWindow infoModalWindow2 = new ModalWindow("infoModalWindow2");
         infoModalWindow2.setTitle("Detailed Project Information");
         add(infoModalWindow2);
 
         ModalContentPage modalContentPage = new ModalContentPage(infoModalWindow2);
         infoModalWindow2.setPageCreator(() -> modalContentPage);
-        //end try
 
 
         add(new Label("userTag", "userName"));
@@ -65,6 +63,7 @@ public class ValPage extends WebPage {
 
         form.add(startSearch);
         form.add(clearSearch);
+        form.setDefaultButton(startSearch);
 
     }
 }

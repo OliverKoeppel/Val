@@ -116,3 +116,9 @@ td {
     height: 20px;
     vertical-align: center;
 }
+
+#close{
+    position: absolute;
+    left: 45%;
+    bottom: 20%;
+}
