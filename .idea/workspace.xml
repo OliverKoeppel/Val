@@ -2,45 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f4ed55b5-1ae4-4328-9db0-02ae7741d212" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/de/valtech/css/all.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/de/valtech/css/all.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/de/valtech/css/brands.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/de/valtech/css/brands.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/de/valtech/css/fontawesome.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/de/valtech/css/fontawesome.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/de/valtech/css/regular.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/de/valtech/css/regular.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/de/valtech/css/solid.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/de/valtech/css/solid.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/de/valtech/css/svg-with-js.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/de/valtech/css/svg-with-js.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/de/valtech/css/v4-shims.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/de/valtech/css/v4-shims.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/de/valtech/webfonts/fa-brands-400.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/de/valtech/webfonts/fa-brands-400.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/de/valtech/webfonts/fa-brands-400.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/de/valtech/webfonts/fa-brands-400.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/de/valtech/webfonts/fa-brands-400.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/de/valtech/webfonts/fa-regular-400.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/de/valtech/webfonts/fa-regular-400.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/de/valtech/webfonts/fa-regular-400.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/de/valtech/webfonts/fa-regular-400.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/de/valtech/webfonts/fa-regular-400.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/de/valtech/webfonts/fa-solid-900.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/de/valtech/webfonts/fa-solid-900.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/de/valtech/webfonts/fa-solid-900.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/de/valtech/webfonts/fa-solid-900.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/de/valtech/webfonts/fa-solid-900.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/de/valtech/LabelLink.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/valtech/LabelLink.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/de/valtech/ModalInfoPanel.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/valtech/ModalInfoPanel.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/de/valtech/ModalInfoPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/valtech/ModalInfoPanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/de/valtech/ProjectListFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/valtech/ProjectListFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/de/valtech/ProjectListModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/valtech/ProjectListModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/de/valtech/ProjectRepeatingView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/valtech/ProjectRepeatingView.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/de/valtech/ValPage.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/valtech/ValPage.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/de/valtech/ValPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/valtech/ValPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/de/valtech/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/valtech/css/myStyle.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/de/valtech/ValPage.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/de/valtech/ValPage.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/de/valtech/ValPage.properties" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -190,7 +160,7 @@
       <workItem from="1572424519795" duration="13113000" />
       <workItem from="1574068911293" duration="1721000" />
       <workItem from="1574070728426" duration="1783000" />
-      <workItem from="1574072639170" duration="8485000" />
+      <workItem from="1574072639170" duration="19888000" />
     </task>
     <servers />
   </component>

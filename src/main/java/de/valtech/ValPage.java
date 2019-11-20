@@ -25,7 +25,7 @@ public class ValPage extends WebPage {
         infoModalWindow.setTitle("Detailed Project Information");
 
 
-        ModalInfoPanel modalInfoPanel = new ModalInfoPanel(infoModalWindow.getContentId(), projectListModel.getObject().get(0), infoModalWindow);
+        ModalInfoPanel modalInfoPanel = new ModalInfoPanel("content", projectListModel.getObject().get(0), infoModalWindow);
         infoModalWindow.setContent(modalInfoPanel);
 
         add(new Label("userTag", "userName"));

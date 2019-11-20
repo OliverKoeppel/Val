@@ -10,7 +10,7 @@ abstract class LabelLink extends AjaxLink<String> {
     LabelLink(String id, IModel<String> model, String linkTitle) {
         super(id, model);
         Label label = new Label("label", Model.of(linkTitle));
-        add(label);
+        this.add(label);
     }
 
 }
