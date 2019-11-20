@@ -2,15 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f4ed55b5-1ae4-4328-9db0-02ae7741d212" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/de/valtech/ModalContentPage.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/de/valtech/ModalContentPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/de/valtech/LabelLink.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/valtech/LabelLink.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/de/valtech/ModalInfoPanel.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/valtech/ModalInfoPanel.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/de/valtech/ModalInfoPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/valtech/ModalInfoPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/de/valtech/ProjectRepeatingView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/valtech/ProjectRepeatingView.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/de/valtech/ValPage.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/valtech/ValPage.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/de/valtech/ValPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/valtech/ValPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/de/valtech/ValPage.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/de/valtech/ValPage.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/de/valtech/ValPage.properties" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -25,8 +24,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="CSS File" />
-        <option value="HTML File" />
         <option value="Class" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -160,7 +159,7 @@
       <workItem from="1572424519795" duration="13113000" />
       <workItem from="1574068911293" duration="1721000" />
       <workItem from="1574070728426" duration="1783000" />
-      <workItem from="1574072639170" duration="19888000" />
+      <workItem from="1574072639170" duration="23908000" />
     </task>
     <servers />
   </component>

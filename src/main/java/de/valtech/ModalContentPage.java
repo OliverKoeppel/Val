@@ -2,28 +2,21 @@ package de.valtech;
 
 import org.apache.wicket.ajax.AjaxRequestTarget;
 import org.apache.wicket.extensions.ajax.markup.html.modal.ModalWindow;
+import org.apache.wicket.markup.html.WebPage;
 import org.apache.wicket.markup.html.basic.Label;
-import org.apache.wicket.markup.html.panel.Panel;
 import org.apache.wicket.model.Model;
 import org.apache.wicket.model.PropertyModel;
 
-
-public class ModalInfoPanel extends Panel {
-
+public class ModalContentPage extends WebPage {
 
     private Project project;
+    private ModalWindow infoModalWindow2;
 
-    public ModalInfoPanel(String id, Project project, ModalWindow infoModalWindow) {
-        super(id);
-        this.project = project;
+    public ModalContentPage(ModalWindow infoModalWindow2) {
 
-        LabelLink closeModalWindowButton = new LabelLink("closeButton", Model.of("String"), "close") {
-            @Override
-            public void onClick(AjaxRequestTarget target) {
-                infoModalWindow.close(target);
-            }
-        };
-        add(closeModalWindowButton);
+        this.project = null;
+        this.infoModalWindow2 = infoModalWindow2;
+
 
     }
 
@@ -33,7 +26,6 @@ public class ModalInfoPanel extends Panel {
 
     @Override
     protected void onConfigure() {
-
         super.onConfigure();
         removeAll();
         add(new Label("title2", Model.of(project.getTitle())));
@@ -42,8 +34,13 @@ public class ModalInfoPanel extends Panel {
         add(new Label("endDate", new PropertyModel<>(project, "endDate")));
         add(new Label("projectLead", Model.of(project.getProjectLead().getFullName())));
         add(new Label("teamMembers", Model.of(project.getTeam().getFullTeamNames())));
+        add(new LabelLink("close", Model.of("String"), "close Info"){
+
+            @Override
+            public void onClick(AjaxRequestTarget target)
+            {
+                infoModalWindow2.close(target);
+            }
+        });
     }
-
-
-
 }

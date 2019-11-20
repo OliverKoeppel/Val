@@ -9,22 +9,23 @@ import org.apache.wicket.model.Model;
 public class ProjectRepeatingView extends RepeatingView {
 
     private ProjectListModel outputList;
-    private ModalWindow infoModalWindow;
-    private ModalInfoPanel modalInfoPanel;
+    private ModalContentPage modalContentPage;
+    private ModalWindow infoModalWindow2;
 
-    public ProjectRepeatingView(String id, IModel<?> model , ModalWindow infoModalWindow, ModalInfoPanel modalInfoPanel) {
+
+    public ProjectRepeatingView(String id, IModel<?> model, ModalContentPage modalContentPage, ModalWindow infoModalWindow2) {
         super(id, model);
-        outputList = ProjectListFactory.createNewProjectList();
-        this.infoModalWindow = infoModalWindow;
-        this.modalInfoPanel = modalInfoPanel;
+        this.outputList = ProjectListFactory.createNewProjectList();
+        this.modalContentPage = modalContentPage;
+        this.infoModalWindow2 = infoModalWindow2;
     }
 
 
-    public ProjectListModel getOutputList() {
+    private ProjectListModel getOutputList() {
         return outputList;
     }
 
-    public void setOutputList(ProjectListModel newOutputList) {
+    void setOutputList(ProjectListModel newOutputList) {
         this.outputList = newOutputList;
     }
 
@@ -38,11 +39,12 @@ public class ProjectRepeatingView extends RepeatingView {
             LabelLink labelLink = new LabelLink(this.newChildId(), Model.of("String"), project.getTitle()) {
                 @Override
                 public void onClick(AjaxRequestTarget target) {
-                    modalInfoPanel.setProject(project);
-                    infoModalWindow.show(target);
+                    modalContentPage.setProject(project);
+                    infoModalWindow2.show(target);
                 }
             };
             this.add(labelLink);
         }
     }
+
 }

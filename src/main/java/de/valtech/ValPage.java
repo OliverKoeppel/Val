@@ -16,17 +16,17 @@ public class ValPage extends WebPage {
 
     public ValPage() {
 
-        ProjectListFactory projectListFactory = new ProjectListFactory();
-        ProjectListModel projectListModel = projectListFactory.createNewProjectList();
+        ProjectListModel projectListModel = ProjectListFactory.createNewProjectList();
 
-        final ModalWindow infoModalWindow = new ModalWindow("infoModalWindow");
-        add(infoModalWindow);
+        //try modalWindow via PageCreator
+        final ModalWindow infoModalWindow2 = new ModalWindow("infoModalWindow2");
+        infoModalWindow2.setTitle("Detailed Project Information");
+        add(infoModalWindow2);
 
-        infoModalWindow.setTitle("Detailed Project Information");
+        ModalContentPage modalContentPage = new ModalContentPage(infoModalWindow2);
+        infoModalWindow2.setPageCreator(() -> modalContentPage);
+        //end try
 
-
-        ModalInfoPanel modalInfoPanel = new ModalInfoPanel("content", projectListModel.getObject().get(0), infoModalWindow);
-        infoModalWindow.setContent(modalInfoPanel);
 
         add(new Label("userTag", "userName"));
 
@@ -40,7 +40,7 @@ public class ValPage extends WebPage {
         final WebMarkupContainer repeatingViewContainer = new WebMarkupContainer("repeatingViewContainer");
         add(repeatingViewContainer);
         repeatingViewContainer.setOutputMarkupId(true);
-        ProjectRepeatingView projectRepeatingView = new ProjectRepeatingView("output_view", projectListModel, infoModalWindow, modalInfoPanel);
+        ProjectRepeatingView projectRepeatingView = new ProjectRepeatingView("output_view", projectListModel, modalContentPage, infoModalWindow2);
         repeatingViewContainer.add(projectRepeatingView);
 
         AjaxSubmitLink startSearch = new AjaxSubmitLink("startSearch", form) {
