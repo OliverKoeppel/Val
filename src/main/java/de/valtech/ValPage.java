@@ -2,13 +2,19 @@ package de.valtech;
 
 import org.apache.wicket.ajax.AjaxRequestTarget;
 import org.apache.wicket.ajax.markup.html.form.AjaxSubmitLink;
+import org.apache.wicket.extensions.ajax.markup.html.autocomplete.AutoCompleteTextField;
 import org.apache.wicket.extensions.ajax.markup.html.modal.ModalWindow;
 import org.apache.wicket.markup.html.WebMarkupContainer;
 import org.apache.wicket.markup.html.WebPage;
 import org.apache.wicket.markup.html.basic.Label;
 import org.apache.wicket.markup.html.form.Form;
-import org.apache.wicket.markup.html.form.TextField;
 import org.apache.wicket.model.Model;
+import org.apache.wicket.model.util.ListModel;
+import org.apache.wicket.util.string.Strings;
+
+import java.util.Collections;
+import java.util.Iterator;
+import java.util.List;
 
 
 public class ValPage extends WebPage {
@@ -31,7 +37,24 @@ public class ValPage extends WebPage {
         Form<String> form = new Form<>("userForm");
         add(form);
 
-        TextField userTxt = new TextField<>("searchText", Model.of(""));
+        AutoCompleteTextField<String> userTxt = new AutoCompleteTextField<String>("searchText", Model.of("")) {
+            @Override
+            protected Iterator getChoices(String input) {
+                List<String> projectNamesList = new java.util.ArrayList<>(Collections.emptyList());
+
+                if (input.isEmpty())
+                {
+                    return projectNamesList.iterator();
+                }
+
+                List<Project> choices = projectListModel.searchProjects(input).getObject();
+
+                for(Project project:choices){
+                projectNamesList.add(project.getTitle());
+                }
+                return projectNamesList.iterator();
+            }
+        };
         userTxt.setOutputMarkupId(true);
         form.add(userTxt);
 

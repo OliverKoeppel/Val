@@ -46,6 +46,12 @@
     height: 20px;
 }
 
+div.wicket-aa {
+    background-color: white;
+    border:3px solid #b2a8b4;
+    color:black;
+}
+
 #searchIcon{
     left: 96%;
 }
@@ -67,7 +73,7 @@
     font-family: "Arial";
 }
 
-.list-container{
+#repeatingViewContainer{
     position: absolute;
     width: 80%;
     left:10%;
@@ -119,6 +125,11 @@ td {
 
 #close{
     position: absolute;
-    left: 45%;
+    ;
     bottom: 20%;
+}
+
+.button-container{
+    width: 100%;
+    text-align: center;
 }
