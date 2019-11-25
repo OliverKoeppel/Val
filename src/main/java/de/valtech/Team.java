@@ -6,19 +6,19 @@ import java.util.List;
 
 public class Team extends ListModel<Human> {
 
-  Team (List<Human> team){
-      super(team);
-  }
+    Team(List<Human> team) {
+        super(team);
+    }
 
-  public String getFullTeamNames(){
-      String output ="";
-      for (Human human : this.getObject())  {
-          if (output==""){
-              output +=  human.getFullName();
-          }
-          output = output+"; " + human.getFullName();
-      }
-      return output;
-  }
+    String getFullTeamNames() {
+        String output = "";
+        for (Human human : this.getObject()) {
+            if (output == "") {
+                output += human.getFullName();
+            }
+            output = output + "; " + human.getFullName();
+        }
+        return output;
+    }
 
 }

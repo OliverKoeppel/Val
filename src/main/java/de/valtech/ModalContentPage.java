@@ -13,12 +13,10 @@ public class ModalContentPage extends WebPage {
     private Project project;
     private ModalWindow infoModalWindow2;
 
-    public ModalContentPage(ModalWindow infoModalWindow2) {
+    ModalContentPage(ModalWindow infoModalWindow2) {
 
         this.project = null;
         this.infoModalWindow2 = infoModalWindow2;
-
-
     }
 
     public void setProject(Project project) {
@@ -35,10 +33,9 @@ public class ModalContentPage extends WebPage {
         add(new Label("endDate", new PropertyModel<>(project, "endDate")));
         add(new Label("projectLead", Model.of(project.getProjectLead().getFullName())));
         add(new Label("teamMembers", Model.of(project.getTeam().getFullTeamNames())));
-        add(new AjaxLink<String>("close", Model.of("close Info")){
-               @Override
-            public void onClick(AjaxRequestTarget target)
-            {
+        add(new AjaxLink<String>("close", Model.of("close Info")) {
+            @Override
+            public void onClick(AjaxRequestTarget target) {
                 infoModalWindow2.close(target);
             }
         });

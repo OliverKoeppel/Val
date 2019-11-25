@@ -1,23 +1,24 @@
 package de.valtech;
 
 import org.apache.wicket.model.util.ListModel;
+
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-public class ProjectListModel extends ListModel<Project> {
+ class ProjectListModel extends ListModel<Project> {
 
 
-    public ProjectListModel(List<Project> list) {
+     ProjectListModel(List<Project> list) {
         super(list);
     }
 
-    public ProjectListModel() {
+     private ProjectListModel() {
         super(Collections.emptyList());
     }
 
-    public ProjectListModel searchProjects(String searchString) {
-        if(searchString.isEmpty()){
+      ProjectListModel searchProjects(String searchString) {
+        if (searchString.isEmpty()) {
             return new ProjectListModel(this.getObject());
         }
         ProjectListModel outputProjectListModel = new ProjectListModel();

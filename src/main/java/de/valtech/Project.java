@@ -6,6 +6,8 @@ import java.time.LocalDate;
 public class Project implements Serializable {
 
     private String title;
+
+
     private LocalDate startDate;
     private LocalDate endDate;
     private Human projectLead;
@@ -20,15 +22,18 @@ public class Project implements Serializable {
     }
 
 
-    public Human getProjectLead() {
+    Human getProjectLead() {
+
         return projectLead;
     }
 
-    public Team getTeam() {
+    Team getTeam() {
+
         return team;
     }
 
-    public String getTitle() {
+    String getTitle() {
+
         return title;
     }
 }

@@ -13,7 +13,7 @@ public class ProjectRepeatingView extends RepeatingView {
     private ModalWindow infoModalWindow2;
 
 
-    public ProjectRepeatingView(String id, IModel<?> model, ModalContentPage modalContentPage, ModalWindow infoModalWindow2) {
+    ProjectRepeatingView(String id, IModel<?> model, ModalContentPage modalContentPage, ModalWindow infoModalWindow2) {
         super(id, model);
         this.outputList = ProjectListFactory.createNewProjectList();
         this.modalContentPage = modalContentPage;

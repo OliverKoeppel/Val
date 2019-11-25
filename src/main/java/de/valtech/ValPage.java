@@ -9,8 +9,6 @@ import org.apache.wicket.markup.html.WebPage;
 import org.apache.wicket.markup.html.basic.Label;
 import org.apache.wicket.markup.html.form.Form;
 import org.apache.wicket.model.Model;
-import org.apache.wicket.model.util.ListModel;
-import org.apache.wicket.util.string.Strings;
 
 import java.util.Collections;
 import java.util.Iterator;
@@ -39,18 +37,17 @@ public class ValPage extends WebPage {
 
         AutoCompleteTextField<String> userTxt = new AutoCompleteTextField<String>("searchText", Model.of("")) {
             @Override
-            protected Iterator getChoices(String input) {
+            protected Iterator<String> getChoices(String input) {
                 List<String> projectNamesList = new java.util.ArrayList<>(Collections.emptyList());
 
-                if (input.isEmpty())
-                {
+                if (input.isEmpty()) {
                     return projectNamesList.iterator();
                 }
 
                 List<Project> choices = projectListModel.searchProjects(input).getObject();
 
-                for(Project project:choices){
-                projectNamesList.add(project.getTitle());
+                for (Project project : choices) {
+                    projectNamesList.add(project.getTitle());
                 }
                 return projectNamesList.iterator();
             }

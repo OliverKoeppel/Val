@@ -30,7 +30,8 @@
 
 <div>
     <form wicket:id="userForm" id="searchForm">
-        <input type="text" wicket:id="searchText" id="searchText" class="basicText" onfocus="lowerOpacity()" onblur="resetOpacity()"/>
+        <input type="text" wicket:id="searchText" id="searchText" class="basicText" onfocus="lowerOpacity()"
+               onblur="resetOpacity()"/>
         <a wicket:id="startSearch" id="searchIcon" class="Icon"><i class="fas fa-search"></i></a>
         <a wicket:id="clearSearch" id="clearIcon" class="Icon"><i class="fas fa-times-circle"></i></a>
     </form>
@@ -40,6 +41,7 @@
     function lowerOpacity() {
         document.getElementById("repeatingViewContainer").style.opacity = 0.2
     }
+
     function resetOpacity() {
         document.getElementById("repeatingViewContainer").style.opacity = 1;
     }
