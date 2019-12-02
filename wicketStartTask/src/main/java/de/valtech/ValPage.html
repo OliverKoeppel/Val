@@ -1,0 +1,63 @@
+<!doctype html>
+<html xmlns:wicket="http://wicket.apache.org">
+
+<head>
+    <meta charset="utf-8"/>
+    <title>ValPage: Getting started with Wicket</title>
+
+</head>
+
+<wicket:head>
+    <wicket:link>
+        <link rel="stylesheet" type="text/css" href="css/myStyle.css"/>
+    </wicket:link>
+    <wicket:link>
+        <link rel="stylesheet" type="text/css" href="css/all.css">
+    </wicket:link>
+
+</wicket:head>
+
+<body>
+<div ID="header">
+
+    <img id="valLogo" src="valtech_logo.png"/>
+
+    <span id="userName" wicket:id="userTag">[label text inserted]</span>
+
+    <img id="userSymbol" src="user_logo.png">
+
+</div>
+
+<div>
+    <form wicket:id="userForm" id="searchForm">
+        <input type="text" wicket:id="searchText" id="searchText" class="basicText" onfocus="lowerOpacity()" onblur="resetOpacity()"/>
+        <a wicket:id="startSearch" id="searchIcon" class="Icon"><i class="fas fa-search"></i></a>
+        <a wicket:id="clearSearch" id="clearIcon" class="Icon"><i class="fas fa-times-circle"></i></a>
+    </form>
+</div>
+
+<script>
+    function lowerOpacity() {
+        document.getElementById("repeatingViewContainer").style.opacity = 0.2
+    }
+    function resetOpacity() {
+        document.getElementById("repeatingViewContainer").style.opacity = 1;
+    }
+</script>
+
+<div wicket:id="infoModalWindow2"></div>
+
+<div id="repeatingViewContainer" wicket:id="repeatingViewContainer">
+    <ul>
+        <li wicket:id="output_view" class="basicText">
+
+            <span wicket:id="label"></span>
+            <i class="fas fa-edit basicText" id="editButton"></i>
+        </li>
+
+    </ul>
+</div>
+
+</body>
+
+</html>
