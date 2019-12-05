@@ -1,13 +1,22 @@
 import React from 'react';
-// import {search_icon} from './Images/search_icon.png';
 import './CSS/SearchComponent.css';
+import './CSS/all.css'
 
 export class SearchComponent extends React.Component{
 
 
     render(){
         return(
-            <span id="searchComponent"> SearchComponent </span>
+            <form>
+            <input type="Text" id="searchComponent" placeholder="Search" onSubmit={this.search_projectList()}/>
+            <a href={this.search_projectList} id="searchIcon" className="Icon"><i className="fas fa-search"></i></a>
+            </form>
         );
     }
+
+    search_projectList(e) {
+        const searchTerm = e.target.value;
+        this.props.onChange(searchTerm);
+    }
+
 }

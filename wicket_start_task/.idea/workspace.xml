@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f4ed55b5-1ae4-4328-9db0-02ae7741d212" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../reactStartTask/.idea/workspace.xml" beforeDir="false" />
-    </list>
+    <list default="true" id="f4ed55b5-1ae4-4328-9db0-02ae7741d212" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,7 +38,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
@@ -160,6 +158,7 @@
       <workItem from="1574072639170" duration="33262000" />
       <workItem from="1575295068054" duration="1023000" />
       <workItem from="1575296288998" duration="525000" />
+      <workItem from="1575533862941" duration="34000" />
     </task>
     <servers />
   </component>
