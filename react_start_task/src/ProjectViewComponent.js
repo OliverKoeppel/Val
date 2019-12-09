@@ -12,21 +12,21 @@ export class ProjectViewComponent extends React.Component{
                     <h1>
                         Here will be the output List
                     </h1>
-                    {renderList}
+                    <ul>
+                    {this.renderList()}
+                    </ul>
                 </div>
 
            );
     }
 
-
-}
-
-function renderList() {
+ renderList() {
     return (
-        <ul>
-            {this.props.display_list.map((item, index) => (
-                <li key={index} item={item.getTitle()} />
-            ),this)}
-        </ul>
+        <div>
+            {this.props.display_list.map((item) => (
+                 <li key={item.getTitle()}> {item.getTitle()} </li>
+            ))}
+        </div>
     );
-}
+
+}}
