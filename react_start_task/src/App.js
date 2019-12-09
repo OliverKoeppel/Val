@@ -21,20 +21,16 @@ class App extends React.Component {
 
     render () {
         return(
-        <div className="App">
 
+            <div>
             <header id="App-header">
                 <img id="valLogo" src={val_logo} alt="val_logo"/>
                 <img id="userLogo" src={user_logo} alt="user_logo"/>
                 <text id="userName"> Max Mustermann</text>
             </header>
-
-            <body>
             <SearchComponent start_search={this.search_List}/>
-            <ProjectViewComponent/>
-            </body>
-
-        </div>
+            <ProjectViewComponent display_list={this.state.searchedList}/>
+           </div>
      )};
 
     search_List(searchString){

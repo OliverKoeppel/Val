@@ -1,3 +1,4 @@
+
 export class Team {
 
     constructor(teamMember){
@@ -10,7 +11,7 @@ export class Team {
     let output ="";
 
      this.teamMember.forEach(h => {
-         if (output.equals("")) {
+         if (output.equals("",true)) {
              output = h.getFullName();
          }else{
          output = output+"; " + h.getFullName();

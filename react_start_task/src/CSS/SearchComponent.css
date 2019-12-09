@@ -11,9 +11,10 @@ input {
 }
 
 #searchIcon{
-    left: 94%;
+    left: 92%;
     color: black;
     position: absolute;
     top: 16%;
+    font-size: 18px;
 }
 
