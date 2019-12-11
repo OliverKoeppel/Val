@@ -11,42 +11,42 @@ class App extends React.Component {
     originalList = new ProjectListFactory();
 
 
-
     constructor(props) {
         super(props);
-        this.state = { searchedList: new ProjectListFactory(),
-        searchTerm: ""};
-
-        this.search_List = this.search_List.bind(this);
+        this.state = {
+            output_List: new ProjectListFactory(),
+        };
+        this.update_output_List = this.update_output_List.bind(this);
     }
 
-    render () {
-        return(
+    render() {
+        return (
 
             <div>
-            <header id="App-header">
-                <img id="valLogo" src={val_logo} alt="val_logo"/>
-                <img id="userLogo" src={user_logo} alt="user_logo"/>
-                <span id="userName"> Max Mustermann</span>
-            </header>
-            <SearchComponent onSubmit={this.search_List} value={this.state.searchTerm}/>
-            <ProjectViewComponent display_list={this.state.searchedList}/>
-           </div>
-     )};
+                <header id="App-header">
+                    <img id="valLogo" src={val_logo} alt="val_logo"/>
+                    <img id="userLogo" src={user_logo} alt="user_logo"/>
+                    <span id="userName"> Max Mustermann</span>
+                </header>
+                <SearchComponent update_output_List={this.update_output_List}/>
+                <ProjectViewComponent display_list={this.state.output_List}/>
+            </div>
+        )
+    };
 
-    search_List(){
+    update_output_List(searchTerm) {
+        if (searchTerm === "") {
+            this.setState({output_List: this.originalList});
 
-        if (this.state.searchTerm === ""){
-            this.setState( {searchedList: this.originalList});
-        }
-    let outputList =[];
-    this.originalList.forEach(project => {
-        if (project.getTitle().includes(this.state.searchTerm)) {
-            outputList.push(project);
-        }
-    });
-    this.setState({ searchedList: outputList});
-    }
+        } else {
+        let output_List_tmp = [];
+        this.originalList.forEach(project => {
+            if (project.getTitle().includes(searchTerm)) {
+                output_List_tmp.push(project);
+            }
+        });
+        this.setState({output_List: output_List_tmp});
+    }}
 
 }
 
