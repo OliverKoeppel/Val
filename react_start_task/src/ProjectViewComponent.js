@@ -25,7 +25,8 @@ export class ProjectViewComponent extends React.Component {
         return (
             <div>
                 {this.props.output_list.map((item) => (
-                    <li key={item.getTitle()} onclick={this.open_project_info(item.getTitle())}>
+                    <li key={item.getTitle()} onClick={this.open_project_info(item.getTitle())}>
+                        {item.getTitle()}
                         <i className="fas fa-edit basicText" id="editButton"></i>
                     </li>
                 ))}

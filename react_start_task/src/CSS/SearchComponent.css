@@ -1,6 +1,6 @@
 #searchComponent {
     position: absolute;
-    width: 80%;
+    width: 73%;
     top: 15%;
     left: 10%;
 }
@@ -11,10 +11,17 @@ input {
 }
 
 #searchIcon{
-    left: 92%;
+    left: 85%;
     color: black;
     position: absolute;
     top: 16%;
     font-size: 18px;
 }
 
+#clearSearchIcon{
+    left: 87%;
+    color: black;
+    position: absolute;
+    top: 16%;
+    font-size: 18px;
+}

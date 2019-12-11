@@ -15,15 +15,21 @@ export class SearchComponent extends React.Component {
         return (
             <form>
                 <input type="Text" id="searchComponent" placeholder="Search"
-                       value={this.state.searchTerm} onChange={(e) => this.update_search_term(e)}/>
+                       value={this.state.searchTerm} onChange={(e) => this.update_search_term(e, e.target.value,false)}/>
                 <button onClick={(e) => this.update_output_list(e)}><i className="fas fa-search" id="searchIcon"/>
+                </button>
+                <button onClick={(e) => this.update_search_term(e, "", true)}><i className="fas fa-times-circle" id="clearSearchIcon"/>
                 </button>
             </form>
         );
     }
 
-    update_search_term(e) {
-        this.setState({searchTerm: e.target.value});
+    update_search_term(e, newValue, updateOutputListBoolean) {
+        this.setState({searchTerm: newValue});
+        if(updateOutputListBoolean === true){
+            //doesnt update the output yet
+            this.props.update_output_List(this.state.searchTerm);
+        }
         e.preventDefault();
     }
 
