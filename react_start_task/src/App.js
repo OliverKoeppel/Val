@@ -42,14 +42,15 @@ class App extends React.Component {
             this.setState({output_List: this.originalList});
 
         } else {
-        const output_List_tmp = [];
-        this.originalList.forEach(project => {
-            if (project.getTitle().includes(searchTerm)) {
-                output_List_tmp.push(project);
-            }
-        });
-        this.setState({output_List: output_List_tmp});
-    }}
+            const output_List_tmp = [];
+            this.originalList.forEach(project => {
+                if (project.getTitle().includes(searchTerm)) {
+                    output_List_tmp.push(project);
+                }
+            });
+            this.setState({output_List: output_List_tmp});
+        }
+    }
 
 }
 

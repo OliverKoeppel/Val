@@ -16,7 +16,8 @@ export class SearchComponent extends React.Component {
             <form>
                 <input type="Text" id="searchComponent" placeholder="Search"
                        value={this.state.searchTerm} onChange={(e) => this.update_search_term(e)}/>
-                <button onClick={(e) => this.update_output_list(e)}><i className="fas fa-search" id="searchIcon"/></button>
+                <button onClick={(e) => this.update_output_list(e)}><i className="fas fa-search" id="searchIcon"/>
+                </button>
             </form>
         );
     }
@@ -26,7 +27,7 @@ export class SearchComponent extends React.Component {
         e.preventDefault();
     }
 
-    update_output_list(e){
+    update_output_list(e) {
         this.props.update_output_List(this.state.searchTerm);
         e.preventDefault();
     }
