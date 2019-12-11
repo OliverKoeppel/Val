@@ -4,14 +4,15 @@ import './CSS/ProjectViewComponent.css';
 export class ProjectViewComponent extends React.Component{
 
 
+    constructor(props) {
+        super(props);
+        this.renderList=this.renderList.bind(this);
+    }
 
-   render() {
+    render() {
         return (
 
                 <div id="projectView">
-                    <h1>
-                        Here will be the output List
-                    </h1>
                     <ul>
                     {this.renderList()}
                     </ul>
@@ -23,7 +24,7 @@ export class ProjectViewComponent extends React.Component{
  renderList() {
     return (
         <div>
-            {this.props.display_list.map((item) => (
+            {this.props.output_list.map((item) => (
                  <li key={item.getTitle()}> {item.getTitle()} </li>
             ))}
         </div>

@@ -29,17 +29,20 @@ class App extends React.Component {
                     <span id="userName"> Max Mustermann</span>
                 </header>
                 <SearchComponent update_output_List={this.update_output_List}/>
-                <ProjectViewComponent display_list={this.state.output_List}/>
+                <ProjectViewComponent output_list={this.state.output_List}/>
             </div>
         )
     };
+
+    componentDidMount() {
+    }
 
     update_output_List(searchTerm) {
         if (searchTerm === "") {
             this.setState({output_List: this.originalList});
 
         } else {
-        let output_List_tmp = [];
+        const output_List_tmp = [];
         this.originalList.forEach(project => {
             if (project.getTitle().includes(searchTerm)) {
                 output_List_tmp.push(project);
