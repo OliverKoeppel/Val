@@ -2,24 +2,30 @@ import React from 'react';
 import './CSS/ProjectViewComponent.css';
 import {InfoPopUp} from "./InfoPopUp";
 
-export class ProjectViewComponent extends React.Component {
 
+export class ProjectViewComponent extends React.Component {
 
     constructor(props) {
         super(props);
+        this.state = {projectInPopUp: this.props.initProject, showPopUp: false};
         this.renderList = this.renderList.bind(this);
-        this.open_project_info = this.open_project_info.bind(this);
-        this.state = {project: new InfoPopUp()};
+        this.closePopUp = this.closePopUp.bind(this);
+        this.openPopUp = this.openPopUp.bind(this);
+
     }
 
     render() {
         return (
-
             <div id="projectView">
                 <ul>
                     {this.renderList()}
                 </ul>
-                <InfoPopUp initializeProject = {this.props.initializeProject}/>
+                {this.state.showPopUp ?
+                    <div>
+                    <h2>show popUp</h2>
+                    <InfoPopUp displayPopUp={this.state.showPopUp} project={this.state.projectInPopUp} closePop={this.closePopUp} id="popUp"></InfoPopUp>
+                    </div>
+                :<h2>don't show popUp</h2>}
             </div>
         );
     }
@@ -27,9 +33,11 @@ export class ProjectViewComponent extends React.Component {
     renderList() {
         return (
             <div>
-                {this.props.output_list.map((item) => (
-                    <li key={item.getTitle()} onClick={this.open_project_info(item)}>
+                {this.props.outputList.map((item) => (
+                    <li key={item.getTitle()} onClick={(e) => {this.openPopUp(e, item)}}>
+                        <a href="#bannerformmodal" data-toggle="modal" data-target="ModalWindow">
                         {item.getTitle()}
+                        </a>
                         <i className="fas fa-edit basicText" id="editButton"></i>
                     </li>
                 ))}
@@ -39,8 +47,13 @@ export class ProjectViewComponent extends React.Component {
     }
 
 
-    open_project_info(project) {
-        this.state.projectInfo_PopUp.update_Project_Info(project);
-        this.state.projectInfo_PopUp.showInfo();
+    openPopUp(e, item) {
+        this.setState({projectInPopUp: item}, () => { this.setState({showPopUp: true})});
+        e.preventDefault();
+    }
+
+    closePopUp(e) {
+        this.setState({showPopUp: false});
+        e.preventDefault();
     }
 }

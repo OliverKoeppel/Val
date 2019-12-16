@@ -11,7 +11,7 @@ export class Team {
     let output ="";
 
      this.teamMember.forEach(h => {
-         if (output.equals("",true)) {
+         if (output === "") {
              output = h.getFullName();
          }else{
          output = output+"; " + h.getFullName();

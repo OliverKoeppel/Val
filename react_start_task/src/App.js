@@ -14,9 +14,9 @@ class App extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            output_List: new ProjectListFactory()
+            outputList: new ProjectListFactory()
         };
-        this.update_output_List = this.update_output_List.bind(this);
+        this.updateOutputList = this.updateOutputList.bind(this);
     }
 
     render() {
@@ -28,27 +28,24 @@ class App extends React.Component {
                     <img id="userLogo" src={user_logo} alt="user_logo"/>
                     <span id="userName"> Max Mustermann</span>
                 </header>
-                <SearchComponent update_output_List={this.update_output_List}/>
-                <ProjectViewComponent output_list={this.state.output_List} initializeProject ={this.originalList[0]}/>
+                <SearchComponent updateOutputList={this.updateOutputList}/>
+                <ProjectViewComponent outputList={this.state.outputList} initProject={this.originalList[0]}/>
             </div>
         )
     };
 
-    componentDidMount() {
-    }
-
-    update_output_List(searchTerm) {
+    updateOutputList(searchTerm) {
         if (searchTerm === "") {
-            this.setState({output_List: this.originalList});
+            this.setState({outputList: this.originalList});
 
         } else {
-            const output_List_tmp = [];
+            const outputListTmp = [];
             this.originalList.forEach(project => {
                 if (project.getTitle().includes(searchTerm)) {
-                    output_List_tmp.push(project);
+                    outputListTmp.push(project);
                 }
             });
-            this.setState({output_List: output_List_tmp});
+            this.setState({outputList: outputListTmp});
         }
     }
 

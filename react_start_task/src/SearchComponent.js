@@ -7,37 +7,37 @@ export class SearchComponent extends React.Component {
     constructor(props) {
         super(props);
         this.state = {searchTerm: ""};
-        this.update_search_term = this.update_search_term.bind(this);
-        this.update_output_list = this.update_output_list.bind(this);
+        this.updateSearchTerm = this.updateSearchTerm.bind(this);
+        this.updateOutputList = this.updateOutputList.bind(this);
     }
 
     render() {
         return (
             <form>
                 <input type="Text" id="searchComponent" placeholder="Search"
-                       value={this.state.searchTerm} onChange={(e) => this.update_search_term(e, e.target.value, false)}
-                       onSubmit={(e) => this.update_search_term(e, e.target.value, true)}/>
-                <button onClick={(e) => this.update_output_list(e)}><i className="fas fa-search" id="searchIcon"/>
+                       value={this.state.searchTerm} onChange={(e) => this.updateSearchTerm(e, e.target.value, false)}
+                       onSubmit={(e) => this.updateSearchTerm(e, e.target.value, true)}/>
+                <button onClick={(e) => this.updateOutputList(e)}><i className="fas fa-search" id="searchIcon"/>
                 </button>
-                <button onClick={(e) => this.update_search_term(e, "", true)}><i className="fas fa-times-circle"
-                                                                                 id="clearSearchIcon"/>
+                <button onClick={(e) => this.updateSearchTerm(e, "", true)}><i className="fas fa-times-circle"
+                                                                               id="clearSearchIcon"/>
                 </button>
             </form>
         );
     }
 
-    update_search_term(e, newValue, updateOutputListBoolean) {
+    updateSearchTerm(e, newValue, updateOutputListBoolean) {
         this.setState({searchTerm: newValue},
             () => {
                 if (updateOutputListBoolean === true) {
-                    this.props.update_output_List(this.state.searchTerm);
+                    this.props.updateOutputList(this.state.searchTerm);
                 }
                 e.preventDefault();
             })
     }
 
-    update_output_list(e) {
-        this.props.update_output_List(this.state.searchTerm);
+    updateOutputList(e) {
+        this.props.updateOutputList(this.state.searchTerm);
         e.preventDefault();
     }
 }
