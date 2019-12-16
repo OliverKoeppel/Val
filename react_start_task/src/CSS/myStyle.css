@@ -81,29 +81,6 @@ div.wicket-aa {
     top: 37%;
 }
 
-ul {
-    position: relative;
-    text-align: left;
-    border: 3px solid #b2a8b4;
-    height: auto;
-    font-size: 20px;
-    margin:0;
-    padding: 0;
-    list-style-type: none;
-}
-
-li {
-    padding: 5px 10px;
-    margin: 5px;
-    background-color: lightgrey;
-}
-
-#editButton{
-    position: absolute;
-    right: 10px;
-
-}
-
 table {
     border-collapse: separate;
     border-spacing: 0.2em;
