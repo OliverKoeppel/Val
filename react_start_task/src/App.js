@@ -14,7 +14,7 @@ class App extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            output_List: new ProjectListFactory(),
+            output_List: new ProjectListFactory()
         };
         this.update_output_List = this.update_output_List.bind(this);
     }
@@ -29,7 +29,7 @@ class App extends React.Component {
                     <span id="userName"> Max Mustermann</span>
                 </header>
                 <SearchComponent update_output_List={this.update_output_List}/>
-                <ProjectViewComponent output_list={this.state.output_List}/>
+                <ProjectViewComponent output_list={this.state.output_List} initializeProject ={this.originalList[0]}/>
             </div>
         )
     };

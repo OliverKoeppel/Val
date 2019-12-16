@@ -1,5 +1,6 @@
 import React from 'react';
 import './CSS/ProjectViewComponent.css';
+import {InfoPopUp} from "./InfoPopUp";
 
 export class ProjectViewComponent extends React.Component {
 
@@ -7,6 +8,8 @@ export class ProjectViewComponent extends React.Component {
     constructor(props) {
         super(props);
         this.renderList = this.renderList.bind(this);
+        this.open_project_info = this.open_project_info.bind(this);
+        this.state = {project: new InfoPopUp()};
     }
 
     render() {
@@ -16,8 +19,8 @@ export class ProjectViewComponent extends React.Component {
                 <ul>
                     {this.renderList()}
                 </ul>
+                <InfoPopUp initializeProject = {this.props.initializeProject}/>
             </div>
-
         );
     }
 
@@ -25,7 +28,7 @@ export class ProjectViewComponent extends React.Component {
         return (
             <div>
                 {this.props.output_list.map((item) => (
-                    <li key={item.getTitle()} onClick={this.open_project_info(item.getTitle())}>
+                    <li key={item.getTitle()} onClick={this.open_project_info(item)}>
                         {item.getTitle()}
                         <i className="fas fa-edit basicText" id="editButton"></i>
                     </li>
@@ -36,7 +39,8 @@ export class ProjectViewComponent extends React.Component {
     }
 
 
-open_project_info(projectTitle){
-    // To be done
-}
+    open_project_info(project) {
+        this.state.projectInfo_PopUp.update_Project_Info(project);
+        this.state.projectInfo_PopUp.showInfo();
+    }
 }
