@@ -1,6 +1,7 @@
 import React from 'react';
 import './CSS/ProjectViewComponent.css';
 import {InfoPopUp} from "./InfoPopUp";
+import Container from "react-bootstrap/Container";
 
 
 export class ProjectViewComponent extends React.Component {
@@ -16,6 +17,8 @@ export class ProjectViewComponent extends React.Component {
 
     render() {
         return (
+            <Container>
+                <InfoPopUp project={this.state.projectInPopUp} show={this.state.showPopUp} closePop = {this.closePopUp}/>
             <div id="projectView">
                 <ul>
                     {this.renderList()}
@@ -23,25 +26,29 @@ export class ProjectViewComponent extends React.Component {
                 {this.state.showPopUp ?
                     <div>
                     <h2>show popUp</h2>
-                    <InfoPopUp displayPopUp={this.state.showPopUp} project={this.state.projectInPopUp} closePop={this.closePopUp} id="popUp"></InfoPopUp>
                     </div>
                 :<h2>don't show popUp</h2>}
+
+
             </div>
+            </Container>
         );
     }
-
     renderList() {
         return (
             <div>
+
                 {this.props.outputList.map((item) => (
-                    <li key={item.getTitle()} onClick={(e) => {this.openPopUp(e, item)}}>
-                        <a href="#bannerformmodal" data-toggle="modal" data-target="ModalWindow">
+                    <li key={item.getTitle()} >
+                        <a href="#PopUp" data-toggle="modal" onClick={(e) => {this.openPopUp(e, item)}}>
                         {item.getTitle()}
                         </a>
                         <i className="fas fa-edit basicText" id="editButton"></i>
                     </li>
+
                 ))}
             </div>
+
         );
 
     }

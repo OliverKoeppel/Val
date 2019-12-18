@@ -17,7 +17,7 @@ class App extends React.Component {
             outputList: new ProjectListFactory()
         };
         this.updateOutputList = this.updateOutputList.bind(this);
-    }
+}
 
     render() {
         return (
@@ -28,8 +28,10 @@ class App extends React.Component {
                     <img id="userLogo" src={user_logo} alt="user_logo"/>
                     <span id="userName"> Max Mustermann</span>
                 </header>
+                <body>
                 <SearchComponent updateOutputList={this.updateOutputList}/>
                 <ProjectViewComponent outputList={this.state.outputList} initProject={this.originalList[0]}/>
+                </body>
             </div>
         )
     };
