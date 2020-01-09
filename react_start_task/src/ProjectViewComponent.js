@@ -23,13 +23,6 @@ export class ProjectViewComponent extends React.Component {
                 <ul>
                     {this.renderList()}
                 </ul>
-                {this.state.showPopUp ?
-                    <div>
-                    <h2>show popUp</h2>
-                    </div>
-                :<h2>don't show popUp</h2>}
-
-
             </div>
             </Container>
         );

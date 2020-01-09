@@ -5,16 +5,16 @@ export class InfoPopUp extends React.Component {
 
     render() {
         return (
-            <Modal show={this.props.show} id="ModalWindow" aria-labelledby="basicModal" aria-hidden="true" centered={true}>
+            <Modal show={this.props.show} id="ModalWindow" aria-labelledby="basicModal" aria-hidden="true"
+                   centered={true}>
 
                 <Modal.Header className="modal-header">
                     <Modal.Title className="modal-title">Project Details</Modal.Title>
                 </Modal.Header>
 
                 <Modal.Body className="modal-body">
-                    <table>
-                        <caption>{this.props.project.getTitle()} </caption>
 
+                    <table>
                         <tbody>
                         <tr>
                             <td>Title</td>
@@ -22,11 +22,11 @@ export class InfoPopUp extends React.Component {
                         </tr>
                         <tr>
                             <td>Start Date</td>
-                            <td><span>{this.props.project.getStartDate().toString()}</span></td>
+                            <td><span>{this.props.project.getStartDate().toLocaleDateString("de",{year:"2-digit",month:"2-digit", day:"2-digit"})}</span></td>
                         </tr>
                         <tr>
                             <td>End Date</td>
-                            <td><span>{this.props.project.getEndDate().toString()}</span></td>
+                            <td><span>{this.props.project.getEndDate().toLocaleDateString()}</span></td>
                         </tr>
                         <tr>
                             <td>Project Manager</td>
