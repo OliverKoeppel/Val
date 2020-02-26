@@ -18,7 +18,6 @@ class App extends React.Component {
     }
 
     getPersonsAll() {
-        console.log('getPersons()...');
         axios.get(api_URL + '/myPersons')
             .then(res => {
                 console.log(res);
@@ -27,19 +26,33 @@ class App extends React.Component {
             .catch(err => console.log("req failed"));
     }
 
-    // insertPersonToAPI() {
-    //     console.log("postDataToAPI");
-    //     let postObj = [];
-    //     postObj.push({first_name: this.state.firstName});
-    //     postObj.push({last_name: this.state.lastName});
-    //     postObj.push({age: this.state.age});
-    //
-    //     let postJSON = JSON.stringify(postObj);
-    //
-    //     axios.post(api_URL + '/postPerson',postJSON)
-    //         .then(res => alert("adding successful"))
-    //         .catch (err => alert("adding failed"));
-    // }
+    postNewData() {
+        console.log("postDataToAPI");
+        let postObj = {first_name:  this.state.firstName,
+            last_name:  this.state.lastName,
+            age: this.state.age };
+
+        axios.post(api_URL + '/myPersons', postObj)
+            .then(res => console.log(res))
+            .catch(err => console.log(err));
+    }
+
+    removeData() {
+        console.log("Deleting Data from API");
+        let deleteObj = {first_name:  this.state.firstName, last_name:  this.state.lastName};
+
+        axios.delete(api_URL + '/myPersons', {
+            params: {deleteObj},
+            headers: {
+                'Content-Type': 'application/json'
+            }})
+            .then(res => console.log(res))
+            .catch(err => console.log(err));
+    }
+
+    updateAge() {
+    // TODO
+    }
 
 
     render() {
@@ -56,17 +69,23 @@ class App extends React.Component {
                     age: <input type='text' id="age_id" value={this.state.age}
                                 onChange={(e) => this.updateAgeState(e, e.target.value)}/> <br/>
 
-                    <button id='postButton' onClick={() => this.postDataToAPI()}>'insert'</button>
+                    <button id='postButton' onClick={() => this.postNewData()}> Add</button>
+
+                    <button id='removeButton' onClick={() => this.removeData()}> Remove </button>
+
+                    <button id='updateButton' onClick={() => this.updateAge()}> Update age </button>
 
                 </form>
 
                 <div>
-                    <button id='getButton' onClick={() => this.getPersonsAll()}> 'get'</button>
+                    <button id='getButton' onClick={() => this.getPersonsAll()}> Get </button>
                     <ul>
-                        {this.state.persons.map(person => <li>{person.first_name + " " + person.last_name}</li>)}
+                        {this.state.persons.map(person =>
+                            <li>{'First Name: ' + person.first_name + ', Last Name: ' + person.last_name}</li>)}
                     </ul>
 
                 </div>
+
 
 
             </div>
